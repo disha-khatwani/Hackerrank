@@ -1,0 +1,123 @@
+import type { JobRole, Skill } from '@/types';
+
+export const SKILLS: Skill[] = [
+  { id: 'skl-js', name: 'JavaScript', domain: 'Programming Languages', isEmergingAI: false, isTenantPrivate: false },
+  { id: 'skl-ts', name: 'TypeScript', domain: 'Programming Languages', parentSkillId: 'skl-js', isEmergingAI: false, isTenantPrivate: false },
+  { id: 'skl-python', name: 'Python', domain: 'Programming Languages', isEmergingAI: false, isTenantPrivate: false },
+  { id: 'skl-go', name: 'Go', domain: 'Programming Languages', isEmergingAI: false, isTenantPrivate: false },
+  { id: 'skl-java', name: 'Java', domain: 'Programming Languages', isEmergingAI: false, isTenantPrivate: false },
+  { id: 'skl-react', name: 'React', domain: 'Frontend Engineering', parentSkillId: 'skl-js', isEmergingAI: false, isTenantPrivate: false },
+  { id: 'skl-css', name: 'CSS & Layout', domain: 'Frontend Engineering', isEmergingAI: false, isTenantPrivate: false },
+  { id: 'skl-accessibility', name: 'Web Accessibility', domain: 'Frontend Engineering', isEmergingAI: false, isTenantPrivate: false },
+  { id: 'skl-node', name: 'Node.js', domain: 'Backend Engineering', parentSkillId: 'skl-js', isEmergingAI: false, isTenantPrivate: false },
+  { id: 'skl-sql', name: 'SQL & Relational Databases', domain: 'Backend Engineering', isEmergingAI: false, isTenantPrivate: false },
+  { id: 'skl-system-design', name: 'System Design', domain: 'Backend Engineering', isEmergingAI: false, isTenantPrivate: false },
+  { id: 'skl-microservices', name: 'Microservices', domain: 'Backend Engineering', isEmergingAI: false, isTenantPrivate: false },
+  { id: 'skl-k8s', name: 'Kubernetes', domain: 'DevOps & Cloud', isEmergingAI: false, isTenantPrivate: false },
+  { id: 'skl-aws', name: 'AWS', domain: 'DevOps & Cloud', isEmergingAI: false, isTenantPrivate: false },
+  { id: 'skl-cicd', name: 'CI/CD Pipelines', domain: 'DevOps & Cloud', isEmergingAI: false, isTenantPrivate: false },
+  { id: 'skl-ios', name: 'iOS (Swift)', domain: 'Mobile Engineering', isEmergingAI: false, isTenantPrivate: false },
+  { id: 'skl-android', name: 'Android (Kotlin)', domain: 'Mobile Engineering', isEmergingAI: false, isTenantPrivate: false },
+  { id: 'skl-pandas', name: 'Data Wrangling (Pandas)', domain: 'Data Science', isEmergingAI: false, isTenantPrivate: false },
+  { id: 'skl-ml', name: 'Machine Learning', domain: 'Data Science', isEmergingAI: false, isTenantPrivate: false },
+  { id: 'skl-prompt-eng', name: 'Prompt Engineering', domain: 'Generative AI', isEmergingAI: true, isTenantPrivate: false },
+  { id: 'skl-rag', name: 'RAG & Vector Databases', domain: 'Generative AI', isEmergingAI: true, isTenantPrivate: false },
+  { id: 'skl-agentic', name: 'Agentic AI Workflows', domain: 'Generative AI', isEmergingAI: true, isTenantPrivate: false },
+  { id: 'skl-qa-auto', name: 'Test Automation', domain: 'Quality Engineering', isEmergingAI: false, isTenantPrivate: false },
+  { id: 'skl-code-review', name: 'Code Review Judgment', domain: 'Quality Engineering', isEmergingAI: false, isTenantPrivate: false },
+  { id: 'skl-nw-proprietary', name: 'Northwind Data Pipeline DSL', domain: 'Northwind Internal', isEmergingAI: false, isTenantPrivate: true, tenantId: 'tenant-northwind', description: 'Internal query language used across Northwind data pipelines.' },
+];
+
+export const JOB_ROLES: JobRole[] = [
+  {
+    id: 'role-frontend-eng-ii',
+    title: 'Frontend Engineer II',
+    category: 'Engineering',
+    isTenantPrivate: false,
+    skillProfile: [
+      { skillId: 'skl-js', targetProficiency: 'advanced', weight: 0.3 },
+      { skillId: 'skl-react', targetProficiency: 'advanced', weight: 0.35 },
+      { skillId: 'skl-css', targetProficiency: 'intermediate', weight: 0.2 },
+      { skillId: 'skl-accessibility', targetProficiency: 'intermediate', weight: 0.15 },
+    ],
+  },
+  {
+    id: 'role-backend-eng-senior',
+    title: 'Senior Backend Engineer — Go',
+    category: 'Engineering',
+    isTenantPrivate: false,
+    skillProfile: [
+      { skillId: 'skl-go', targetProficiency: 'expert', weight: 0.4 },
+      { skillId: 'skl-system-design', targetProficiency: 'advanced', weight: 0.3 },
+      { skillId: 'skl-sql', targetProficiency: 'advanced', weight: 0.15 },
+      { skillId: 'skl-microservices', targetProficiency: 'advanced', weight: 0.15 },
+    ],
+  },
+  {
+    id: 'role-devops-eng',
+    title: 'DevOps Engineer',
+    category: 'Infrastructure',
+    isTenantPrivate: false,
+    skillProfile: [
+      { skillId: 'skl-k8s', targetProficiency: 'advanced', weight: 0.35 },
+      { skillId: 'skl-aws', targetProficiency: 'advanced', weight: 0.35 },
+      { skillId: 'skl-cicd', targetProficiency: 'intermediate', weight: 0.3 },
+    ],
+  },
+  {
+    id: 'role-data-scientist',
+    title: 'Data Scientist',
+    category: 'Data',
+    isTenantPrivate: false,
+    skillProfile: [
+      { skillId: 'skl-python', targetProficiency: 'advanced', weight: 0.3 },
+      { skillId: 'skl-pandas', targetProficiency: 'advanced', weight: 0.3 },
+      { skillId: 'skl-ml', targetProficiency: 'intermediate', weight: 0.4 },
+    ],
+  },
+  {
+    id: 'role-ai-engineer',
+    title: 'AI Engineer',
+    category: 'Engineering',
+    isTenantPrivate: false,
+    skillProfile: [
+      { skillId: 'skl-python', targetProficiency: 'advanced', weight: 0.25 },
+      { skillId: 'skl-prompt-eng', targetProficiency: 'advanced', weight: 0.25 },
+      { skillId: 'skl-rag', targetProficiency: 'advanced', weight: 0.25 },
+      { skillId: 'skl-agentic', targetProficiency: 'intermediate', weight: 0.25 },
+    ],
+  },
+  {
+    id: 'role-mobile-eng',
+    title: 'Mobile Engineer — iOS',
+    category: 'Engineering',
+    isTenantPrivate: false,
+    skillProfile: [
+      { skillId: 'skl-ios', targetProficiency: 'advanced', weight: 0.6 },
+      { skillId: 'skl-system-design', targetProficiency: 'intermediate', weight: 0.4 },
+    ],
+  },
+  {
+    id: 'role-qa-eng',
+    title: 'QA Automation Engineer',
+    category: 'Quality',
+    isTenantPrivate: false,
+    skillProfile: [
+      { skillId: 'skl-qa-auto', targetProficiency: 'advanced', weight: 0.5 },
+      { skillId: 'skl-js', targetProficiency: 'intermediate', weight: 0.3 },
+      { skillId: 'skl-code-review', targetProficiency: 'intermediate', weight: 0.2 },
+    ],
+  },
+  {
+    id: 'role-nw-pipeline-eng',
+    title: 'Data Pipeline Engineer (Northwind)',
+    category: 'Northwind Internal',
+    isTenantPrivate: true,
+    tenantId: 'tenant-northwind',
+    skillProfile: [
+      { skillId: 'skl-nw-proprietary', targetProficiency: 'advanced', weight: 0.5 },
+      { skillId: 'skl-python', targetProficiency: 'advanced', weight: 0.3 },
+      { skillId: 'skl-sql', targetProficiency: 'intermediate', weight: 0.2 },
+    ],
+  },
+];

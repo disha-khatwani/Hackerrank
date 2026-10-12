@@ -1,0 +1,74 @@
+/**
+ * Kombee — Brand Guidelines & Color Tokens
+ * Authentic Kombee Indigo (#4648D4), clean modern light SaaS surfaces.
+ */
+@theme {
+  /* ---- Brand primitives — Kombee Indigo Palette ---- */
+  --color-primary: #4648D4;            /* Kombee signature brand indigo */
+  --color-primary-secondary: #585af2;  /* Vibrant indigo hover */
+  --color-primary-light: #e0e1fe;      /* Soft brand lavender */
+  --color-primary-pale: #f2f3fe;       /* Faint brand tint */
+
+  --color-accent: #0284c7;             /* Clean sky accent */
+  --color-accent-light: #e0f2fe;
+
+  --color-orange: #f59e0b;
+  --color-orange-light: #fef3c7;
+  --color-orange-accent: #fbbf24;
+
+  --color-ai-dark-green: #065f46;
+  --color-ai-green: #059669;
+  --color-ai-light-green: #d1fae5;
+  --color-ai-mint: #10b981;
+
+  --color-error: #ef4444;
+  --color-error-light: #fee2e2;
+
+  /* ---- Neutral scale ---- */
+  --color-neutral-50:  #f8fafc;
+  --color-neutral-100: #f1f5f9;
+  --color-neutral-200: #e2e8f0;
+  --color-neutral-300: #cbd5e1;
+  --color-neutral-400: #94a3b8;
+  --color-neutral-500: #64748b;
+  --color-neutral-600: #475569;
+  --color-neutral-700: #334155;
+  --color-neutral-800: #1e293b;
+  --color-neutral-900: #0f172a;
+
+  /* ---- Status ---- */
+  --color-success: #10b981;
+  --color-success-light: #ecfdf5;
+  --color-warning: #f59e0b;
+  --color-warning-light: #fffbeb;
+  --color-info: #4648D4;
+  --color-info-light: #f2f3fe;
+
+  /* ---- Semantic: surfaces ---- */
+  --color-surface: #ffffff;
+  --color-surface-subtle: #f4f5fa;     /* Light soft SaaS backdrop matching reference images */
+  --color-surface-muted: #f8fafc;
+  --color-surface-inverse: #0f172a;
+  --color-surface-ai: #f0fdf4;
+
+  /* ---- Semantic: text ---- */
+  --color-text-primary: #111827;
+  --color-text-secondary: #4b5563;
+  --color-text-tertiary: #9ca3af;
+  --color-text-disabled: #cbd5e1;
+  --color-text-inverse: #ffffff;
+  --color-text-link: #4648D4;
+  --color-text-on-primary: #ffffff;
+
+  /* ---- Semantic: borders ---- */
+  --color-border: #e5e7eb;
+  --color-border-strong: #d1d5db;
+  --color-border-focus: #4648D4;
+
+  /* ---- Semantic: focus ring ---- */
+  --color-focus-ring: #4648D4;
+
+  /* ---- Gradients ---- */
+  --gradient-primary: linear-gradient(135deg, #4648D4 0%, #585af2 100%);
+  --gradient-card-hero: linear-gradient(135deg, #4648D4 0%, #6366f1 100%);
+}

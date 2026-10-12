@@ -1,0 +1,64 @@
+/**
+ * Typography tokens, per the brand guideline: Poppins throughout, with a
+ * fixed type scale. Tailwind v4 theme keys below generate `text-h1`,
+ * `text-body-1`, etc. utilities (size + line-height); weight is applied via
+ * the paired `.text-h1` component classes so every call site gets the
+ * correct size, line-height, and weight together instead of recomposing
+ * three utilities by hand at every usage.
+ */
+@theme {
+  --font-sans: 'Poppins', ui-sans-serif, system-ui, -apple-system, sans-serif;
+
+  --text-h1: 32px;
+  --text-h1--line-height: 40px;
+  --text-h2: 24px;
+  --text-h2--line-height: 32px;
+  --text-h3: 20px;
+  --text-h3--line-height: 28px;
+  --text-h4: 18px;
+  --text-h4--line-height: 26px;
+  --text-body-1: 16px;
+  --text-body-1--line-height: 24px;
+  --text-body-2: 14px;
+  --text-body-2--line-height: 20px;
+  --text-caption: 12px;
+  --text-caption--line-height: 16px;
+}
+
+@layer components {
+  .text-h1 {
+    font-size: var(--text-h1);
+    line-height: var(--text-h1--line-height);
+    font-weight: 700;
+  }
+  .text-h2 {
+    font-size: var(--text-h2);
+    line-height: var(--text-h2--line-height);
+    font-weight: 600;
+  }
+  .text-h3 {
+    font-size: var(--text-h3);
+    line-height: var(--text-h3--line-height);
+    font-weight: 600;
+  }
+  .text-h4 {
+    font-size: var(--text-h4);
+    line-height: var(--text-h4--line-height);
+    font-weight: 500;
+  }
+  .text-body-1 {
+    font-size: var(--text-body-1);
+    line-height: var(--text-body-1--line-height);
+    font-weight: 400;
+  }
+  .text-body-2 {
+    font-size: var(--text-body-2);
+    line-height: var(--text-body-2--line-height);
+    font-weight: 400;
+  }
+  .text-caption {
+    font-size: var(--text-caption);
+    line-height: var(--text-caption--line-height);
+    font-weight: 400;
+  }
+}
